@@ -1,0 +1,160 @@
+@orang: #FB8B24;
+@myfont:'Red Hat Text', sans-serif;
+.desktop_version{
+  margin:auto;
+  display: flex;
+  flex-direction: row;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.3));
+  animation: anim_margin 1s;
+  animation-fill-mode: both;
+}
+.category {
+  display: flex;
+  flex-direction: column;
+  min-height: 604px;
+  margin-top: 100px;
+  padding-bottom: 40px;
+  filter: drop-shadow(4px 0px 2px rgba(0, 0, 0, 0.05));
+
+  background: #E0AD89;
+  mix-blend-mode: normal;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 40px;
+  z-index: 2;
+
+  span {
+    display: block;
+    width: 100%;
+    height: 39.76px;
+    margin-top: 30px;
+    font-family: @myfont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    animation: font-size_of_category 1s;
+    animation-fill-mode: both;
+    line-height: 32px;
+    align-items: center;
+    text-align: center;
+  }
+  button {
+    display: table-cell;
+    padding-inline: 10%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    animation: font-size_of_button 1s;
+    animation-fill-mode: both;
+    font-family: @myfont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: justify;
+    border: 0;
+    transition: 0.4s;
+    background: #E0AD89;;
+  }
+  button:focus{
+    background: #E2CABF;
+  }
+  button:hover{
+    background: #E2CABF;
+  }
+}
+.prices{
+  margin-top: 100px;
+  margin-left: -72px;
+  padding-left: 72px;
+  padding-right: 10px;
+  bottom: 21.48%;
+
+  background: #E2CABF;
+  mix-blend-mode: normal;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 40px;
+}
+
+.price_list {
+  margin: 46px;
+  font-family: @myfont;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  animation: font-size_of_button 1s;
+  animation-fill-mode: both;
+}
+.mobile_version{
+  margin-inline: 25px;
+  display: none;
+  .panel{
+    padding-inline: 10%;
+    display: none;
+    overflow: hidden;
+    background: #E2CABF;
+    mix-blend-mode: normal;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  .accordion{
+    cursor: pointer;
+    outline: none;
+  }
+  pre{
+    font-family: @myfont;
+    font-size: 14px;
+    line-height: 18.62px;
+  }
+}
+@media(max-width: 1200px) {
+  @keyframes font-size_of_button {
+    0% {
+      font-size: 18px;
+    }
+    100% {
+      font-size: 16px;
+    }
+  }
+}
+@media(max-width: 885px) {
+
+  @keyframes font-size_of_button {
+    0% {
+      font-size: 16px;
+    }
+    100% {
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .mobile_version{
+    display: block;
+  }
+  .desktop_version{
+    display: none;
+  }
+}
+@media (max-width: 480px){
+  .category{
+    margin-top: 50px;
+  }
+}
+@media (max-width: 390px){
+  .mobile_version{
+    margin-inline: 5px;
+    .panel {
+      padding: 0;
+      padding-left: 3%;
+    }
+  }
+}
+
+
+
+
+
